@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script src="https://kit.fontawesome.com/d9dfb6a543.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="menu" id="menu" onclick="shownav()"><svg width="16" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/></svg></div>
+      <a href="#"><img src="./images/logo.svg"></a>
+      <ul>
+        <a href="#"><li>Collections</li></a>
+        <a href="#"><li>Men</li></a>
+        <a href="#"><li>Women</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Contact</li></a>
+      </ul>
+      <div id="cart" onclick="showcart()"><a href="#"><img src="./images/icon-cart.svg" ></a></div>
+      <img class="avatar"  src="./images/image-avatar.png" height="60px">
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <img src="./images/image-product-1.jpg" class="header_img" id="header_img" onclick="showHideSection()">
+    <div class="hidebuttons">
+      <button onclick="previousImg()" class="previousImg"><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+      <button onclick="nextImg()" class="NextImg"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+    </div>
+    <div class="container_02">
+      <p1>SNEAKER COMPANY</p1>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p2>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p2>
+      <h2>$125.00 <label>50%</label></h2>
+      <del>$250.00</del><br>
+      <button class="btn_cart"> 
+        <label id="btn_remove" class="btn_remove"  onclick="removeFromCart()">-</label> 
+        <label id="cart_count">0</label>
+        <label id="btn_add" class="btn_add" onclick="addFromCart()">+</label>
+    </button>
+      <button class="btn_add_cart" onclick="btn_add_cart()"> <label><i class="fa-solid fa-cart-shopping fa-2xs" style="color: #000000;"></i></label>Add to cart</button>
+    </div>
+  </main>
+  
+  <section class="container_03">
+    <img src="./images/image-product-1-thumbnail.jpg" class="image_product_1"  onclick="SlidePicture('./images/image-product-1.jpg')">
+    <img src="./images/image-product-2-thumbnail.jpg" class="image_product_2"  onclick="SlidePicture('./images/image-product-2.jpg')">
+    <img src="./images/image-product-3-thumbnail.jpg" class="image_product_3"  onclick="SlidePicture('./images/image-product-3.jpg')">
+    <img src="./images/image-product-4-thumbnail.jpg" class="image_product_4"  onclick="SlidePicture('./images/image-product-4.jpg')">
+  </section>
+
+
+  <section class="HideSection">
+
+    <div class="container_04">
+      <div class="main-image">
+          <img id="index_picture" src="./images/image-product-1.jpg" alt="Main Image">
+          <div class="button_Prv_Next">
+            <button onclick="previousImg()" class="previousImg"><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+            <button onclick="nextImg()" class="NextImg"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+          </div>
+        </div>
+      <div class="thumbnail-images">
+          <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="Image 1" onclick="changeImage('./images/image-product-1.jpg')">
+          <img class="thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="Image 2" onclick="changeImage('./images/image-product-2.jpg')">
+          <img class="thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="Image 3" onclick="changeImage('./images/image-product-3.jpg')">
+          <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="Image 4" onclick="changeImage('./images/image-product-4.jpg')">
+
+      </div>
+  </div>
+
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
